@@ -85,12 +85,18 @@
         const box = document.querySelector('.counter-box');
         box.textContent 
 
-        up.addEventListener('click', ()=>{
+         up.addEventListener('click', ()=>{
             box.textContent++
+            if(box.textContent === "10"){
+                box.textContent = '0'
+            }
         })
         
         down.addEventListener('click', ()=>{
             box.textContent--
+            if(box.textContent === "-10"){
+                box.textContent = '0'
+            }
         })
     
     </script>

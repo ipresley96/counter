@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+
+        .container{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            height: 500px;
+        }
+
+        .counter-box{
+            position: relative;
+            top: 20%;
+            width: 50%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+    
+        .button-up,
+        .button-down {
+        position: relative;
+        top: 60%;
+        padding: 5px;
+        margin: 30px auto;
+        background: #000;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        transition: all 0.2s linear;
+        }
+
+        .button-down:hover {
+        transform: translate3d(0, 10px, 0);
+        }
+
+        .button-up:hover {
+        transform: translate3d(0, -10px, 0);
+        }
+
+        .button-up::after,
+        .button-down::after {
+        content: "";
+        position: absolute;
+        left: 17px;
+        z-index: 11;
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        }
+
+        .button-up::after {
+        top: 20px;
+        transform: rotate(45deg);
+        }
+
+        .button-down::after {
+        top: 10px;
+        transform: rotate(225deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="arrow button-down"></div>
+        <div class="counter-box"> 0 </div>
+        <div class="arrow button-up"></div>
+    </div>
+    <script>
+        const container = document.querySelector(".container");
+        const up = document.querySelector('.button-up');
+        const down = document.querySelector('.button-down');
+        const box = document.querySelector('.counter-box');
+        box.textContent 
+
+        up.addEventListener('click', ()=>{
+            box.textContent++
+        })
+        
+        down.addEventListener('click', ()=>{
+            box.textContent--
+        })
+    
+    </script>
+</body>
+</html>
